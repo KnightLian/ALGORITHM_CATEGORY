@@ -31,5 +31,5 @@ class Solution:
         f[1] = 2
         for i in range(2, n):
             f[i] = f[i-1] + f[i-2]
-        print(f)
+#        print(f)
         return f[-1]
