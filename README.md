@@ -1,2 +1,2 @@
 # ALGORITHM_CATEGORY
-Categorized Algorithm Questions from Leecode or somewhere else
+Categorized Algorithm Questions from Leecode or lintcode
