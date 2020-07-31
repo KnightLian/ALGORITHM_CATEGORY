@@ -1,2 +1,2 @@
 # ALGORITHM CATEGORY
-Categorized algorithm questions from different sources. T
+Categorized algorithm questions from different sources.
