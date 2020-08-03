@@ -7,6 +7,8 @@ Example:
 Input: "aab"
 Output: 1
 Explanation: The palindrome partitioning ["aa","b"] could be produced using 1 cut.
+
+Help Video: https://m.youtube.com/watch?v=WPr1jDh3bUQ
 '''
 
 class Solution:
