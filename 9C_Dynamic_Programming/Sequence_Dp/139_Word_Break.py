@@ -22,5 +22,16 @@ Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
 Output: false
 '''
 
-
-
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        n = len(s)
+        f = [False]*(n+1)
+        f[0] = True
+        for j in range(1, n+1):
+            for i in range(j):
+                word = s[i:j]
+                # print(word)
+                if word in wordDict and f[i] == True:
+                    f[j] = True
+        # print(f)
+        return f[-1]         
