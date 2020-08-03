@@ -14,5 +14,13 @@ Note:
 You can assume that you can always reach the last index.
 '''
 
-
-
+class Solution:
+    def jump(self, nums: List[int]) -> int:
+        n = len(nums)
+        dp = [0]*n
+        for i in range(1, n):
+            for j in range(i):
+                if nums[j]+j>=i:
+                    dp[i] = dp[j]+1
+                    break
+        return dp[-1]
