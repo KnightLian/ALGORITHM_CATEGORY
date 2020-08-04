@@ -2,6 +2,8 @@
 Given n items with size Ai, 
 an integer m denotes the size of a backpack. How full you can fill this backpack?
 
+-You can not divide any item into small pieces.
+
 Example 1:
 	Input:  [3,4,8,5], backpack size=10
 	Output:  9
