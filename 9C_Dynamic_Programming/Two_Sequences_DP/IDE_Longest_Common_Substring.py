@@ -15,3 +15,13 @@ Example 2:
 	Explanation: 
 	Longest common substring is 'A' or 'C' or 'B'
 '''
+
+class Solution:
+    """
+    @param A: A string
+    @param B: A string
+    @return: the length of the longest common substring.
+    """
+    def longestCommonSubstring(self, A, B):
+		
+		
