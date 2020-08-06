@@ -59,3 +59,21 @@ ba在baba的子序列中出现的个数等于下面两个情况相加:
 试想如果T为空，无论S为什么，都包含一个T，即包含一个空串。所以要初始化dp[0~S1.length][0]=1。
 '''
 
+class Solution:
+    def numDistinct(self, s: str, t: str) -> int:
+        ns = len(s)
+        nt = len(t)
+
+        dp = [[0]*(ns+1) for _ in range(nt+1)]
+        
+        for i in range(ns+1):
+            dp[0][i] = 1
+
+        for i in range(1, nt+1):
+            for j in range(1, ns+1):
+                if s[j-1] == t[i-1]:
+                    dp[i][j] = dp[i-1][j-1] + dp[i][j-1]
+                else:
+                    dp[i][j] = dp[i][j-1]
+
+        return dp[-1][-1]
