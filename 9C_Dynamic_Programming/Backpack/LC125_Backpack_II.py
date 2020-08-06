@@ -1,4 +1,6 @@
 '''
+0/1 Knapsack Problem
+
 There are n items and a backpack with size m. 
 Given array A representing the size of each item and array V representing the value of each item.
 What's the maximum value can you put into the backpack?
@@ -19,5 +21,7 @@ Output: 10
 Explanation: Put A[0] and A[2] into backpack, getting the maximum value V[0] + V[2] = 10 
 
 O(nm) memory is acceptable, can you do it in O(m) memory?
+
+Help: https://www.youtube.com/watch?v=xCbYmUPvc2Q&t=773s
 '''
 
