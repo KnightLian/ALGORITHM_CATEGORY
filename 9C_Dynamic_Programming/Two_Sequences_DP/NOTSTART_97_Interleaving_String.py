@@ -22,10 +22,10 @@ class Solution:
         dp[0][0] = True
 
         for i in range(1, n2+1):
-            if s2[:(i-1+1)] == s3[:(i-1+1)]:
+            if s2[:(i-1+1)] == s3[:(i-1+1)]: # include the ith letter
                 dp[0][i] = True
         for i in range(1, n1+1):
-            if s1[:(i-1+1)] == s3[:(i-1+1)]:
+            if s1[:(i-1+1)] == s3[:(i-1+1)]: # include the ith letter
                 dp[i][0] = True
         # print(dp)
         
