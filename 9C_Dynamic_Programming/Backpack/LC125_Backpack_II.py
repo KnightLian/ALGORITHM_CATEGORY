@@ -25,3 +25,36 @@ O(nm) memory is acceptable, can you do it in O(m) memory?
 Help: https://www.youtube.com/watch?v=xCbYmUPvc2Q&t=773s
 '''
 
+class Solution:
+    """
+    @param m: An integer m denotes the size of a backpack
+    @param A: Given n items with size A[i]
+    @param V: Given n items with value V[i]
+    @return: The maximum value
+    """
+    def backPackII(self, m, A, V):
+        # write your code here
+
+        n = len(A)
+        dp = [[0]*(m+1) for _ in range(n)]
+        
+        # initialize for 1st iterm
+        for i in range(m+1):
+            if i >= A[0]:
+                dp[0][i] = V[0]
+                
+        for i in range(1, n):
+            for j in range(1, m+1):
+                # if weight constrain is bigger 
+                # consider to choose iterm i or not
+                if j >= A[i]: 
+                    dp[i][j] = max(dp[i-1][j], dp[i-1][j-A[i]]+V[i])
+                    
+                # otherwise    
+                # have to not choose iterm i    
+                else: 
+                    dp[i][j] = dp[i-1][j] 
+                
+    #     print(dp)        
+        return dp[-1][-1]
+    
