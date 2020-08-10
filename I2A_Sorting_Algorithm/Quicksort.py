@@ -13,5 +13,7 @@ Output: [0,0,1,1,2,5]
 Constraints:
 1 <= nums.length <= 50000
 -50000 <= nums[i] <= 50000
+
+Help: https://www.youtube.com/watch?v=COk73cpQbFQ
 '''
 
