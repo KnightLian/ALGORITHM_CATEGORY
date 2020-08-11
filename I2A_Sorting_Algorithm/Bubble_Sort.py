@@ -15,3 +15,12 @@ Constraints:
 -50000 <= nums[i] <= 50000
 '''
 
+class Solution:
+    def sortArray(self, nums: List[int]) -> List[int]:
+        n = len(nums)
+        for i in range(n-1):
+            for j in range(n-1-i):
+                # print(i,j)
+                if nums[j] > nums[j+1]:
+                    nums[j], nums[j+1] = nums[j+1], nums[j]
+        return nums
